@@ -23,3 +23,28 @@ PixelFrame/
 ├── gallery.js # Reserved for future dynamic features
 ├── images/ # Folder containing all your image assets
 └── README.md # Project documentation
+
+# 3 august, 2025
+# Image Gallery with Hover Effect
+
+This is a simple image gallery project using HTML and CSS. When you hover over an image, it shows the image name and a download button with a smooth animation.
+
+## Features
+
+- Hover effect to show image details
+- Download button on each image
+- Clean and responsive layout
+
+## Files Included
+
+- `index.html` – The main HTML structure
+- `style.css` – All CSS styles
+- `images/` – Folder containing image files
+
+## How to Use
+
+1. Clone or download this repository.
+2. Add your own images in the `images/` folder.
+3. Open `index.html` in your browser to see the gallery.
+
+
