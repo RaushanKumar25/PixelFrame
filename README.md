@@ -47,4 +47,7 @@ This is a simple image gallery project using HTML and CSS. When you hover over a
 2. Add your own images in the `images/` folder.
 3. Open `index.html` in your browser to see the gallery.
 
+- Lightbox view on image click with photographer name and action buttons
+
+
 
