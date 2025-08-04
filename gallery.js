@@ -7,19 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const imagesWrapper = document.querySelector(".images");
   const loadMoreBtn = document.querySelector(".load-more");
   const searchInput = document.querySelector(".search-box input");
-  const downloadImg = (imgURL) => {
+
+  // ✅ Make downloadImg globally accessible
+  window.downloadImg = (imgURL) => {
     fetch(imgURL)
-      .then(res => res.blob()).then(file => {
-       const a = document.createElement("a");
-        a.href = URL.createObjectURL(file); 
+      .then(res => res.blob())
+      .then(file => {
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(file);
         a.download = new Date().getTime();
         a.click();
-      }).catch(() => alert("Failed to download image!"));
-  }
+      })
+      .catch(() => alert("Failed to download image!"));
+  };
 
   // 🖼 Generate cards from fetched image data
   const generateHTML = (images) => {
-    const newCards = images.map((img) => 
+    const newCards = images.map((img) =>
       `<li class="card">
         <img src="${img.src.large2x}" alt="img">
         <div class="details">
@@ -27,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <i class="uil uil-camera"></i>
             <span>${img.photographer}</span>
           </div>
-          <button onclick="downloadImg('${img.src.large2x})">
-          <i class="uil uil-import"></i>
+          <button onclick="downloadImg('${img.src.large2x}')">
+            <i class="uil uil-import"></i>
           </button>
         </div>
       </li>`
@@ -72,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") {
       currentPage = 1;
       searchTerm = e.target.value.trim();
-      imagesWrapper.innerHTML = ""; 
+      imagesWrapper.innerHTML = "";
       getImages(`https://api.pexels.com/v1/search?query=${searchTerm}&page=${currentPage}&per_page=${perPage}`);
     }
   };
