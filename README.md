@@ -1,53 +1,57 @@
-# 📸 PixelFrame – Elegant Image Gallery
+# 📸 Image Gallery App using JavaScript
 
-PixelFrame is a stylish and responsive image gallery built using **HTML**, **CSS**, and a sprinkle of **JavaScript** for future enhancements. It features a clean UI with a modern masonry layout and a smooth search bar interface. Perfect for displaying photos in an elegant, user-friendly way.
+An elegant, responsive image gallery web app that fetches photos using the Pexels API. Features include:
 
----
-
-## 🎯 Features
-
-- 🖼️ Masonry-style image layout (like Pinterest)
-- 📱 Fully responsive design
-- 🔍 Stylish search bar (UI only for now)
-- ✨ Google Fonts & Icon integration
-- 🎨 Clean and minimalist interface
+- 🔍 **Randomized Image Fetching**
+- 📥 **Download Image Button**
+- 💡 **Lightbox View with Close Button**
+- 🔒 **Scroll Lock while Lightbox is Open**
+- ➕ **Load More Functionality**
 
 ---
 
-## 📂 Project Structure
+## 🔧 Technologies Used
 
-PixelFrame/
-│
-├── gallery.html # Main HTML file
-├── gallery.css # All styling for gallery & search
-├── gallery.js # Reserved for future dynamic features
-├── images/ # Folder containing all your image assets
-└── README.md # Project documentation
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Pexels Developer API
 
-# 3 august, 2025
-# Image Gallery with Hover Effect
+---
 
-This is a simple image gallery project using HTML and CSS. When you hover over an image, it shows the image name and a download button with a smooth animation.
+## 🚀 How It Works
 
-## Features
+1. Click on **Load More** to fetch new random images.
+2. Click any image to open it in a **lightbox view**.
+3. Click **Download** to save the image.
+4. Press the **Close Button** or click outside to exit the lightbox.
+5. While lightbox is active, the **background page will not scroll**.
 
-- Hover effect to show image details
-- Download button on each image
-- Clean and responsive layout
+---
 
-## Files Included
+## 🔑 API Integration
 
-- `index.html` – The main HTML structure
-- `style.css` – All CSS styles
-- `images/` – Folder containing image files
+- Uses [Pexels API](https://www.pexels.com/api/) for fetching random high-quality images.
+- You must have your **Pexels API Key** to run this locally.
 
-## How to Use
+---
 
-1. Clone or download this repository.
-2. Add your own images in the `images/` folder.
-3. Open `index.html` in your browser to see the gallery.
+## 📁 Folder Structure
 
-- Lightbox view on image click with photographer name and action buttons
+```plaintext
+├── index.html
+├── style.css
+├── gallery.js
+├── README.md
 
+
+🧠 Author
+Roshan Bhardwaj
+💻 Cloud & Full Stack Enthusiast
+
+
+---
+
+Let me know if you want a separate `preview.jpg` placeholder or help with pushing this to GitHub step-by-step!
 
 
