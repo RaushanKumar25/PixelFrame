@@ -148,7 +148,11 @@ input, button, i {
     width: 100%;
     display: none;
     height:  100%;
-    background: rgba(0, 0, 0, 0.65) ;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox.show {
+    display: block;
 }
 .lightbox .wrapper {
     position: absolute;
