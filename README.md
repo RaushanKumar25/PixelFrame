@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view the live project](https://your-username.github.io/PixelFrame/)  
+🔗 [Click here to view the live project] ( https://raushankumar25.github.io/PixelFrame/ )
 *(Make sure your `index.html` is at root and GitHub Pages is enabled on the `main` branch)*
 
 
