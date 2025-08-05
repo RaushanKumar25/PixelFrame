@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = lightBox.querySelector(".uil-times");
   const downloadImgBtn = lightBox.querySelector(".uil-import");
 
-  // ✅ Download image
+  
   window.downloadImg = (imgURL) => {
     fetch(imgURL)
       .then(res => res.blob())
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(() => alert("Failed to download image!"));
   };
 
-  // ✅ Show Lightbox
+ 
   const showLightbox = (name, img) => {
     lightBox.querySelector("img").src = img;
     lightBox.querySelector("span").innerText = name;
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
      document.body.style.overflow = "auto"; 
    }
 
-  // ✅ Hide Lightbox on click
+  
   lightBox.addEventListener("click", () => lightBox.classList.remove("show"));
 
-  // 🖼 Generate HTML dynamically
+  
   const generateHTML = (images) => {
     const newCards = images.map((img, index) =>
       `<li class="card" data-name="${img.photographer}" data-img="${img.src.large2x}">
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imagesWrapper.insertAdjacentHTML("beforeend", newCards);
   };
 
-  // ✅ Delegate events: Click on card or download button
+ 
   imagesWrapper.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
     const downloadBtn = e.target.closest("button[data-download]");
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
 
 
-  // 📦 Fetch from API
+ 
   const getImages = (apiURL) => {
     loadMoreBtn.innerText = "Loading...";
     loadMoreBtn.classList.add("disabled");
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   };
 
-  // ➕ Load more button
+
   const loadMoreImages = () => {
     currentPage++;
     const apiURL = searchTerm
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getImages(apiURL);
   };
 
-  // 🔍 Search handler
+
   const loadSearchImages = (e) => {
     if (e.key === "Enter") {
       currentPage = 1;
@@ -119,10 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // 🚀 Initial load
+  
   getImages(`https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`);
 
-  // ⏬ Add listeners
+
   loadMoreBtn?.addEventListener("click", loadMoreImages);
   searchInput?.addEventListener("keyup", loadSearchImages);
   closeBtn.addEventListener("click", hideLightbox);
