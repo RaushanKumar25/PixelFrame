@@ -1,5 +1,11 @@
 # 📸 Image Gallery App using JavaScript
 
+## 🚀 Live Demo
+
+🔗 [Click here to view the live project](https://your-username.github.io/PixelFrame/)  
+*(Make sure your `index.html` is at root and GitHub Pages is enabled on the `main` branch)*
+
+
 An elegant, responsive image gallery web app that fetches photos using the Pexels API. Features include:
 
 - 🔍 **Randomized Image Fetching**
