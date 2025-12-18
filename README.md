@@ -58,6 +58,6 @@ Roshan Bhardwaj
 
 ---
 
-Let me know if you want a separate `preview.jpg` placeholder or help with pushing this to GitHub step-by-step!
+Let me know if you want a separate `preview.jpg` placeholder or help with pushing this to GitHub step-by-step!..
 
 
